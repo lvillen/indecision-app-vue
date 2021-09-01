@@ -3,11 +3,15 @@
   <div class="bg-dark"></div>
 
   <div class="indecision-container">
-    <input type="text" placeholder="Ask a question!">
+    <input
+      v-model="question"
+      type="text"
+      placeholder="Ask a question!"
+    >    
     <p>Remember to end with a question mark: "?"</p>
 
     <div class="question">
-      <h2>Will I be a millionaire?</h2>
+      <h2>{{ question }}</h2>
       <h1>No way, punk</h1>
     </div>
   </div>
@@ -15,7 +19,18 @@
 
 <script>
 export default {
+  data() {
+    return {
+      question: null
+    }
+  },
+  watch: {
+    question(value, oldValue) {
+      if(!value.includes('?')) return 
 
+      //TODO http request
+    }
+  }
 }
 </script>
 
