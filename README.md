@@ -1,4 +1,7 @@
 # Indecision App
+This app takes the *yesno.wtf API* and recreates its website adding some fun to the app with some question asking to the user. I Hope you like it!
+
+It also has a second app, *Counter*, which was developed to cover some basics of VueJS. 
 
 ## Project setup
 ```
